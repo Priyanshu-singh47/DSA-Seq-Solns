@@ -7,4 +7,6 @@ public:
                 largest=nums[i];
             }
         }
-        return largest ;
+        return largest ; 
+    }
+}
