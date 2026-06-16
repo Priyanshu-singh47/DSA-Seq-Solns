@@ -20,9 +20,9 @@ public:
 
         val2 = val2 / val1;               // X + Y
 
-        long long X = (val1 + val2) / 2;  // repeating
-        long long Y = X - val1;           // missing
+        long long x= (val1 + val2) / 2;  // repeating
+        long long y = x - val1;           // missing
 
-        return {(int)X, (int)Y};
+        return {(int)x, (int)y};
     }
-};
+}
