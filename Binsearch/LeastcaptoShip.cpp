@@ -11,13 +11,13 @@ public:
         return days;
     }
     int shipWithinDays(vector<int>& weights, int days) {
-        int n=weights.size();int maxi=INT_MIN; ;int sum=0;
+        int n=weights.size();int maxi=INT_MIN; ;int Sum=0;
         for(int i=0;i<n;i++){
-            sum+=weights[i];
+            Sum+=weights[i];
             maxi=max(maxi,weights[i]);
 
         }
-        int low=maxi;int high=sum;int val=0;int ans=0;
+        int low=maxi;int high=Sum;int val=0;int ans=0;
         while(low<=high){
             int mid=(low+high)/2;
             val=calfn(weights,mid);
