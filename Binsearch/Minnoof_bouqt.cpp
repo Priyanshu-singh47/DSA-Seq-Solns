@@ -28,8 +28,8 @@ public:
 
         }
         int low=mini;int high=maxi;int ans;
-        long long val = m*1LL *k*1LL;
-        if(val>n) return -1;
+        long long Val = m*1LL *k*1LL;
+        if(Val>n) return -1;
         while(low<=high){
             int mid=(low+high)/2;
             if (possible(bloomDay,mid,m,k)==true){
@@ -40,4 +40,4 @@ public:
         }
         return low;
     }
-};
+}
