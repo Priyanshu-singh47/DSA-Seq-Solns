@@ -35,3 +35,54 @@ public:
 
 //optimal below
 
+class Solution {
+public:
+
+    ListNode* findNthNode(ListNode* temp, int k) {
+        int cnt = 1;
+
+        while (temp != nullptr) {
+            if (cnt == k)
+                return temp;
+
+            cnt++;
+            temp = temp->next;
+        }
+
+        return temp;
+    }
+
+    ListNode* rotateRight(ListNode* head, int k) {
+
+        if (head == nullptr || head->next == nullptr || k == 0)
+            return head;
+
+        ListNode* tail = head;
+        int len = 1;
+
+        while (tail->next != nullptr) {
+            tail = tail->next;
+            len++;
+        }
+
+        k = k % len;
+
+        if (k == 0)
+            return head;
+
+        // Make the list circular
+        tail->next = head;
+
+        // Find the new last node
+        ListNode* newLastNode = findNthNode(head, len - k);
+
+        // New head
+        head = newLastNode->next;
+
+        // Break the circle
+        newLastNode->next = nullptr;
+
+        return head;
+    }
+
+};
