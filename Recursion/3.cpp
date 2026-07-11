@@ -17,7 +17,7 @@ public:
         if (sign == 1 && ans > INT_MAX)
             return INT_MAX;
 
-        if (sign == -1 && -ans < INT_MIN)
+        if (sign == -1 && -ans < INT_MIN)//why
             return INT_MIN;
 
         return solve(s, i + 1, ans, sign);
