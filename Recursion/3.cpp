@@ -5,7 +5,7 @@ public:
         if (i >= s.size() || !isdigit(s[i])) {
             ans *= sign;
 
-            if (ans > INT_MAX) return INT_MAX;
+            if (ans > INT_MAX) return INT_MAX;//hello
             if (ans < INT_MIN) return INT_MIN;
 
             return (int)ans;
